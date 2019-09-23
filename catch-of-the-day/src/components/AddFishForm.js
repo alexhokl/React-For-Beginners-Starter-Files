@@ -4,7 +4,7 @@ class AddFishForm extends Component {
   name = React.createRef();
   price = React.createRef();
   status = React.createRef();
-  description = React.createRef();
+  desc = React.createRef();
   image = React.createRef();
 
   onSubmit = (e) => {
@@ -13,7 +13,7 @@ class AddFishForm extends Component {
       name: this.name.current.value,
       price: parseFloat(this.price.current.value),
       status: this.status.current.value,
-      description: this.description.current.value,
+      desc: this.desc.current.value,
       image: this.image.current.value,
     }
     this.props.addFish(fish);
@@ -31,7 +31,7 @@ class AddFishForm extends Component {
           <option value="avaiable">Available</option>
           <option value="unavaiable">Unavailable</option>
         </select>
-        <textarea name="description" ref={this.description} placeholder="Description" />
+        <textarea name="desc" ref={this.desc} placeholder="Description" />
         <input name="image" type="text" ref={this.image} placeholder="Image" />
         <button type="submit">Add Fish</button>
       </form>
