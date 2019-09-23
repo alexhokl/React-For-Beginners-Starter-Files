@@ -7,6 +7,7 @@ class StorePicker extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     console.info(this.myInput.current.value);
+    this.props.history.push(`/store/${this.myInput.current.value}`);
   };
 
   render() {
